@@ -12,8 +12,11 @@ jobs:
     validate-branch-name:
         runs-on: ubuntu-latest
         steps:
-            - name: Validate branch name requirements
-              uses: uday-agg/AGG-CiCd-Demo@main
+            - uses: actions/checkout@v1
+            - run: npm ci
+            - uses: nelonoel/branch-name@v1.0.1
+            # Use branch name for whatever purpose
+            - run: echo ${BRANCH_NAME}
               with:
                   regex: '([a-zA-Z])+\/([a-zA-Z])+'
                   min_length: 6
