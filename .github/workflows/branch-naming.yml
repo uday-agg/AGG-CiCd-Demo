@@ -14,9 +14,5 @@ jobs:
         steps:
             - name: Validate branch name requirements
               uses: nelonoel/branch-name@v1.0.1
-              with:
-                regex: '([a-zA-Z])+\/([a-zA-Z])+'
-                min_length: 6
-            # Use branch name for whatever purpose
               run: echo ${BRANCH_NAME}
                 
