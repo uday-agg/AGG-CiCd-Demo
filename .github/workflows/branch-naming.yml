@@ -13,7 +13,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Validate branch name requirements
-              uses: deepakputhraya/action-branch-name@master
+              uses: AGG-CiCd-Demo/action-branch-name@main
               with:
                   regex: '([a-zA-Z])+\/([a-zA-Z])+'
                   min_length: 6
