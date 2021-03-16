@@ -12,7 +12,6 @@ jobs:
     validate-branch-name:
         runs-on: ubuntu-latest
         steps:
-            - name: Validate branch name requirements
-              uses: nelonoel/branch-name@v1.0.1
-              run: echo ${BRANCH_NAME}
-                
+           - uses: nelonoel/branch-name@v1.0.1
+            # Use branch name for whatever purpose
+           - run: echo ${BRANCH_NAME}
